@@ -32,5 +32,11 @@ public class Member {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public boolean matchPassword(String pwd) {
+		return password.equals(pwd);
+	}
 
+	public void changePassword(String newPwd) {
+		this.password = newPwd;
+	}
 }

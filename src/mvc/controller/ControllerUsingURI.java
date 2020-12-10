@@ -107,7 +107,9 @@ public class ControllerUsingURI extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		request.getRequestDispatcher(prefix + view + suffix)
+		if (view != null) {
+			request.getRequestDispatcher(prefix + view + suffix)
 			.forward(request, response);
+		}
 	}
 }
