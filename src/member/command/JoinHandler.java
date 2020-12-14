@@ -17,9 +17,9 @@ public class JoinHandler implements CommandHandler {
 	
 	@Override
 	public String process(HttpServletRequest req, HttpServletResponse res) throws Exception {
-		if (req.getMethod().equalsIgnoreCase("GET")) {
+		if (req.getMethod().equalsIgnoreCase("get")) {
 			return processForm(req, res);
-		} else if (req.getMethod().equalsIgnoreCase("POST")) {
+		} else if (req.getMethod().equalsIgnoreCase("post")) {
 			return processSubmit(req, res);
 		} else {
 			res.setStatus(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
