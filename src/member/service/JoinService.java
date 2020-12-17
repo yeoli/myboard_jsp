@@ -16,7 +16,7 @@ private MemberDao memberDao = new MemberDao();
 		Connection con = null;
 		try {
 			con = ConnectionProvider.getConnection();
-			con.setAutoCommit(false);
+			con.setAutoCommit(false); //자동 커밋 금지
 			
 			Member m = memberDao.selectById(con, joinReq.getId());
 			
